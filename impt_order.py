@@ -8,11 +8,11 @@ from log import logger
 #链接数据库
 try: 
     conn = pymssql.connect(
-        server="rm-wz916727b6414lnw4ro.sqlserver.rds.aliyuncs.com",
-        port = 3977,
-        user='dev_lougao',
-        password='i9+53Cj6uVZ',
-        database='dev_lougao'
+        server="server link",
+        port = port_number,
+        user='user_name',
+        password='user_password',
+        database='database'
         )
     cursor = conn.cursor()
 except Exception as e:
@@ -20,7 +20,7 @@ except Exception as e:
 else:
     logger.info('链接数据库成功')
 
-cursor.execute('delete from  [dev_lougao].[dbo].[yz_order_info] where left(order_date,10)=CAST(dateadd(day,-1,GETDATE()) AS DATE)')
+cursor.execute('delete from  [database].[table] where left(order_date,10)=CAST(dateadd(day,-1,GETDATE()) AS DATE)') #yyyy-MM-dd
 
 class impt_db:
     def impt(impt_path):
@@ -60,7 +60,7 @@ class impt_db:
     ###执行存储过程
     #def exec_db():
     #    try:
-    #        cursor.execute(f"exec fill_in_db.[dbo].[yz_order_info]")
+    #        cursor.execute(f"exec [table]")
     #    except Exception as e:
     #        logger.error(e)
     #    else:
