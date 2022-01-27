@@ -50,13 +50,13 @@ class mainSpider:
             page.click("[placeholder=\"请输入手机号\"]")
 
             # Fill [placeholder="请输入手机号"]
-            page.fill("[placeholder=\"请输入手机号\"]", "17634443739")
+            page.fill("[placeholder=\"请输入手机号\"]", "phone_number")
 
             # Click [placeholder="输入登录密码"]
             page.click("[placeholder=\"输入登录密码\"]")
 
             # Fill [placeholder="输入登录密码"]
-            page.fill("[placeholder=\"输入登录密码\"]", "7ujm8ik,9ol.")
+            page.fill("[placeholder=\"输入登录密码\"]", "password")
             #等待5秒
             page.wait_for_timeout(5000)
 
@@ -76,11 +76,11 @@ class mainSpider:
         else :
                 #logger.info('登录后台成功')
                 pass
-        # Click text=谭飞自用好物馆总店
-        #page.click("text=谭飞自用好物馆总店")
+        # Click text='aaaaaaaaa'
+        #page.click("text=aaaaaaaaa")
         #assert page.url == "https://www.youzan.com/v4/shop/select-store?hqKdtId=42561193&redirect=https%3A%2F%2Fstore.youzan.com%2Fv2%2Fdashboard%2Findex"
 
-        # Click text=谭飞自用好物馆总店
+        # Click text=aaaaaaaaa
         
         with page.expect_navigation(url="https://store.youzan.com/v4/dashboard"):
             with page.expect_navigation():
@@ -259,13 +259,13 @@ class mainSpider:
                 try:
                     with page.expect_navigation(url="https://store.youzan.com/v4/dashboard"):
                         with page.expect_navigation():
-                          page.click("text=谭飞舒适职场时装总店")
-                    # Click text=谭飞舒适职场时装总店
-                    page.click("text=谭飞舒适职场时装总店")
+                          page.click("text=bbbbbbbbbbbbbb")
+                    # Click text=bbbbbbbbbbbbbb
+                    page.click("text=bbbbbbbbbbbbbb")
                 except Exception as e:
                     logger.error(e)
                 else :
-                    logger.info('进入谭飞舒适职场时装总店成功')
+                    logger.info('进入bbbbbbbbbbbbbb成功')
             
             #循环一次取数
             i+=1
